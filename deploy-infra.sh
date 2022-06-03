@@ -11,9 +11,9 @@ GH_REPO=$(cat ~/.github/aws-bootstrap-repo)
 GH_BRANCH=master
 
 AWS_ACCOUNT_ID=`aws sts get-caller-identity --profile awsbootstrap --query "Account" --output text`
-CODEPIPELINE_BUCKET="$STACK_NAME-$REGION-codepipeline-$AWS_ACCOUNT_ID" 
+CODEPIPELINE_BUCKET="$STACK_NAME_$REGION_codepipeline_$AWS_ACCOUNT_ID" 
 
-Echo $CODEPIPELINE_BUCKET
+echo $CODEPIPELINE_BUCKET
 
 # Deploys static resources
 echo "\n\n=========== Deploying setup.yml ==========="
